@@ -10,9 +10,12 @@ const inventarioRouter = require("./v1/routes/inventarioRoutes")
 const { swaggerDocs: V1SwaggerDocs } = require("./v1/swagger");
 const app = express();
 
-app.use(cors({
-  origin: 'http://localhost:5173'
-}));
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
 app.use(express.json());
 
 const port = process.env.PORT || 3300;
