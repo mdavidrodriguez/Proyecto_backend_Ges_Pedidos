@@ -28,25 +28,9 @@ const Clientes = sequelize.define(
     
   },
   {
-    // Other model options go here
+   
   }
 );
-
-// const results = await Clientes.findAll({
-//   include: [
-//     {
-//       model: Pedidos,
-//       include: [
-//         {
-//           model: Productos,
-//           attributes: ["nombre", "precio","cantidad"],
-//         },
-//       ],
-//       attributes: ["nroOrden", "fechaPedido"],
-//     },
-//   ],
-//   attributes: ["nombre", "email",],
-// });
 
 
 (async () => {

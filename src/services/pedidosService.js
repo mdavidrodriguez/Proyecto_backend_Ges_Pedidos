@@ -11,7 +11,6 @@ const getAllPedidos = async (filterParams) => {
   }
 };
 
-// Pedidos.js
 const getPedidosListado = async () => {
   try {
     const allPedidos = await Pedido.getPedidosListado();

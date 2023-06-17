@@ -36,12 +36,6 @@ Clientes.hasMany(Pedidos, { foreignKey: 'clienteId' });
 Pedidos.belongsTo(Clientes, { foreignKey: "clienteId" });
 
 
-
-
-
-
-
-
 Pedidos.findAllData = function(){
   Pedidos.belongsTo(Clientes, {foreignKey: 'clienteId'});
   return Pedidos.findAll({include: [{model: Clientes}, {model: Productos}]});
