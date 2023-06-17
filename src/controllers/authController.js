@@ -14,10 +14,9 @@ const signIn = async (req, res) => {
 };
 
 const signUp = async (req, res) => {
-  const { username, email, password, role } = req.body;
-  const id = uuidv4();
+  const { username, email, password } = req.body;
   try {
-    const createdUser = await authService.signUp({id, username, email, password });
+    const createdUser = await authService.signUp({ username, email, password });
     res.send({ status: "OK", data: createdUser });
   } catch (error) {
     res.status(error?.status || 500).send({ status: "FAILED", data: { error: error?.message || error } });
